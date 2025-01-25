@@ -40,7 +40,7 @@ export function HeroSection() {
           <img
             src="/hero-image.jpg"
             alt="Stock photo of content strategists"
-            className="w-full size-full object-cover max-h-[600px]"
+            className="size-full object-cover max-h-[600px]"
           />
         </div>
       </div>

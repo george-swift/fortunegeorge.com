@@ -2,17 +2,25 @@
 
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
-import { Link, NavLink } from 'react-router'
+import { Link, NavLink, useLocation } from 'react-router'
 
 import { Button } from '~/components/button'
 import { Container } from '~/components/container'
 import { cn, navigation } from '~/lib/utils'
 
 export function Header() {
+  const location = useLocation()
+
+  const isServicesPage = location.pathname === '/services'
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <Container as="header" className="p-[6vw] xl:py-[3vw] xl:px-[4vw]">
+    <Container
+      as="header"
+      {...(isServicesPage && { 'data-section-theme': 'bright' })}
+      className="bg-background p-[6vw] xl:py-[3vw] xl:px-[4vw]"
+    >
       <nav aria-label="Global" className="flex items-center justify-between">
         <div className="flex lg:flex-1">
           <Link
@@ -54,7 +62,7 @@ export function Header() {
               to={item.href}
               className={({ isActive }) =>
                 cn('py-[0.1em] text-base/[1.4em] text-foreground', {
-                  underline: isActive
+                  'underline underline-offset-[.2em]': isActive
                 })
               }
             >
@@ -109,7 +117,7 @@ export function Header() {
                 to={item.href}
                 className={({ isActive }) =>
                   cn('py-[0.1em] text-[8.5vmin] leading-none text-foreground', {
-                    underline: isActive
+                    'underline underline-offset-[.2em]': isActive
                   })
                 }
               >
