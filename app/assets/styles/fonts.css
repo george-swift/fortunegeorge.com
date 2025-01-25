@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/Obviously-Thin.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/Obviously-ThinItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Obviously-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Obviously-LightItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Obviously-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Obviously-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Obviously-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Obviously-MediumItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Obviously-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Obviously-SemiboldIt.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Obviously-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Obviously-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/Obviously-Super.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/Obviously-SuperItalic.otf') format('opentype');
+}
