@@ -11,14 +11,12 @@ import { cn, navigation } from '~/lib/utils'
 export function Header() {
   const location = useLocation()
 
-  const isServicesPage = location.pathname === '/services'
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <Container
       as="header"
-      {...(isServicesPage && { 'data-section-theme': 'bright' })}
+      {...(location.pathname !== '/' && { 'data-section-theme': 'bright' })}
       className="bg-background p-[6vw] xl:py-[3vw] xl:px-[4vw]"
     >
       <nav aria-label="Global" className="flex items-center justify-between">
