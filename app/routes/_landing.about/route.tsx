@@ -59,9 +59,6 @@ export default function About() {
             <h2 className="whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_2.5)_/_25))] text-[calc(1.5_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(1.5_*_1.2vw_+_1rem)] xl:text-[calc(2.5_*_1rem)]">
               Every great story begins with a spark. Mine started with a passion
               for connecting people to ideas through digital channels.{' '}
-              {/* <span className="py-px bg-[var(--menuOverlayBackgroundColor)]">
-                something more.
-              </span> */}
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
