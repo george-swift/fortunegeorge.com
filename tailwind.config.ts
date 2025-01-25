@@ -1,22 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
-  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: [
-          '"Inter"',
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+      colors: {
+        background: 'var(--backgroundColor)',
+        foreground: 'var(--paragraphColor)',
+        heading: 'var(--titleColor)',
+        link: 'var(--linkColor)',
+        overlay: 'var(--menuOverlayBackgroundColor)'
       },
-    },
+      containers: {
+        '8xl': '1400px'
+      },
+      fontFamily: {
+        obviously: ['obviously', 'system-ui', 'serif']
+      },
+      maxWidth: ({ theme, breakpoints }) => ({
+        unset: 'unset',
+        none: 'none',
+        '8xl': '1400px',
+        ...breakpoints(theme('screens'))
+      })
+    }
   },
-  plugins: [],
-} satisfies Config;
+  plugins: []
+} satisfies Config
