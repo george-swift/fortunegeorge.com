@@ -96,7 +96,7 @@ export function Footer() {
           </div>
           <p className="text-balance text-sm/6">
             Fortune George is an independent digital marketing strategist and
-            copywriter. He has helped dozens of clients realize their online
+            copywriter. He has helped several clients realize their online
             potential and is excited about an opportunity to help you reach
             yours.
           </p>
