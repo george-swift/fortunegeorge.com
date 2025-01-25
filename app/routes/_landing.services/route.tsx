@@ -13,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
   ]
 }
 
-export default function Home() {
+export default function Services() {
   return (
     <main className="[background:--accentToLightAccentGradient] w-full">
       <Container
