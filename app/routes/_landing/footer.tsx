@@ -117,17 +117,15 @@ export function Footer() {
         <div className="mt-16 grid grid-cols-2 gap-8 lg:mt-0">
           <div className="lg:grid lg:grid-cols-2 lg:gap-6">
             <div className="lg:col-start-2">
-              <h3>Site Map</h3>
               <ul role="list" className="mt-4 space-y-4">
                 {navigation.map(item => (
                   <li key={item.name}>
                     <NavLink
                       to={item.href}
                       className={({ isActive }) =>
-                        cn(
-                          'py-[0.1em] decoration-1 underline-offset-[.2em] text-link underline',
-                          { 'no-underline': isActive }
-                        )
+                        cn('py-[0.1em] decoration-1 text-link', {
+                          'underline underline-offset-[.2em]': isActive
+                        })
                       }
                     >
                       {item.name}
