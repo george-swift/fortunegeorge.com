@@ -168,7 +168,7 @@ export function CallToActionSection() {
           to="/contact"
           className={cn(
             buttonVariants(),
-            'mx-auto flex w-fit h-14 px-14 rounded-full text-white'
+            'mx-auto my-10 flex w-fit h-14 px-14 rounded-full text-white'
           )}
         >
           Contact Me
