@@ -122,10 +122,7 @@ export default function Services() {
 
         <Link
           to="/contact"
-          className={cn(
-            buttonVariants(),
-            'mx-auto mt-20 mb-10 flex w-fit h-14 px-14 rounded-full text-white'
-          )}
+          className={cn(buttonVariants(), 'mx-auto mt-20 mb-10 flex w-fit')}
         >
           Contact Me
         </Link>
