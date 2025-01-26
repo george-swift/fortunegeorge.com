@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  --heroTextFontSize: calc(3 * calc(0.012 * min(100vh, 900px)) + 1rem);
   --accent-hsl: 3.87096774, 70.45454545%, 82.74509804%;
   --darkAccent-hsl: 273.06122449, 90.18404908%, 68.03921569%;
   --lightAccent-hsl: 42.54545455, 100%, 67.64705882%;
@@ -39,12 +40,6 @@
   );
 }
 
-[data-section-theme='light'] {
-  --backgroundColor: hsla(var(--white-hsl), 1);
-  --paragraphColor: hsla(var(--black-hsl), 1);
-  --titleColor: hsla(var(--safeDarkAccent-hsl), 1);
-}
-
 [data-section-theme='light-bold'] {
   --backgroundColor: hsla(var(--lightAccent-hsl), 1);
   --paragraphColor: hsla(var(--black-hsl), 1);
@@ -55,12 +50,6 @@
   --backgroundColor: hsla(var(--accent-hsl), 1);
   --paragraphColor: hsla(var(--safeInverseAccent-hsl), 1);
   --titleColor: hsla(var(--safeInverseAccent-hsl), 1);
-}
-
-[data-section-theme='white'] {
-  --backgroundColor: hsla(var(--white-hsl), 1);
-  --paragraphColor: hsla(var(--black-hsl), 1);
-  --titleColor: hsla(var(--black-hsl), 1);
 }
 
 [data-section-theme='black'] {
@@ -74,9 +63,13 @@ body {
   @apply bg-background text-foreground font-obviously antialiased;
 }
 
+body {
+  @apply flex flex-col min-h-screen;
+}
+
 h1,
 h2,
 h3,
 h4 {
-  @apply text-heading;
+  @apply text-primary;
 }

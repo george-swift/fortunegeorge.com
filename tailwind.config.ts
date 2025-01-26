@@ -7,7 +7,7 @@ export default {
       colors: {
         background: 'var(--backgroundColor)',
         foreground: 'var(--paragraphColor)',
-        heading: 'var(--titleColor)',
+        primary: 'var(--titleColor)',
         link: 'var(--linkColor)',
         overlay: 'var(--menuOverlayBackgroundColor)'
       },
@@ -16,6 +16,9 @@ export default {
       },
       fontFamily: {
         obviously: ['obviously', 'system-ui', 'serif']
+      },
+      fontSize: {
+        hero: 'var(--heroTextFontSize)'
       },
       maxWidth: ({ theme, breakpoints }) => ({
         unset: 'unset',
