@@ -8,11 +8,45 @@ import {
   ScrollRestoration
 } from 'react-router'
 
-import stylesheet from '~/assets/styles/index.css?url'
+import stylesheet from '~/styles/index.css?url'
 
 import type { Route } from './+types/root'
 
 export const links: Route.LinksFunction = () => [
+  {
+    rel: 'icon',
+    href: '/favicon/favicon.ico'
+  },
+  {
+    rel: 'icon',
+    href: '/favicon/favicon-16x16.png',
+    sizes: '16x16',
+    type: 'image/png'
+  },
+  {
+    rel: 'icon',
+    href: '/favicon/favicon-32x32.png',
+    sizes: '32x32',
+    type: 'image/png'
+  },
+  {
+    rel: 'apple-touch-icon',
+    href: '/favicon/apple-touch-icon.png',
+    type: 'image/png'
+  },
+  {
+    rel: 'android-chrome',
+    href: '/favicon/android-chrome-192x192.png',
+    sizes: '192x192',
+    type: 'image/png'
+  },
+  {
+    rel: 'android-chrome',
+    href: '/favicon/android-chrome-512x512.png',
+    sizes: '512x512',
+    type: 'image/png'
+  },
+  { rel: 'manifest', href: '/favicon/site.webmanifest' },
   { rel: 'stylesheet', href: stylesheet }
 ]
 
@@ -22,6 +56,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="og:title" content="Fortune George" />
+        <meta
+          name="og:description"
+          content="Fortune George is a digital marketing expert specializing in content strategy, SEO optimization, Google Ads, and social media campaigns."
+        />
+        <meta name="og:site_name" content="Fortune George" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="og:type" content="website" />
         <Meta />
         <Links />
       </head>
