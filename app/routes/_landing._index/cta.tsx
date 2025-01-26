@@ -13,12 +13,12 @@ export function CallToActionSection() {
       >
         <div className="grid grid-cols-1 py-10 gap-6 md:grid-cols-[160px,_1fr] lg:pt-20 lg:gap-40 xl:gap-56">
           <img
-            src="/section-divider.png"
+            src="/images/section-divider.png"
             alt=""
             className="w-24 h-14 lg:w-40 lg:h-24 object-cover"
           />
           <div className="flex flex-col w-full gap-10">
-            <h2 className="whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-[calc(3_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
+            <h2 className="whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-hero lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
               Don’t worry about sounding professional.{' '}
               <span className="relative z-[5]">
                 Sound like you.
@@ -52,8 +52,8 @@ export function CallToActionSection() {
               </defs>
             </svg>
             <img
-              src="/home-office.jpg"
-              alt="Stock photo of home office setup"
+              src="/images/home-office.jpg"
+              alt="Home office setup"
               className="w-full h-[304px] object-cover lg:h-[340px] xl:h-[482px] xl:min-w-[482px]"
             />
           </div>
@@ -82,7 +82,7 @@ export function CallToActionSection() {
       >
         <div className="grid grid-cols-1 gap-10 pb-10 md:grid-cols-2">
           <div className="flex flex-col gap-8">
-            <h2 className="whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-[calc(3_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
+            <h2 className="whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-hero lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
               I’m obsessed with helping you reach your{' '}
               <span className="relative z-[5]">
                 full potential.
@@ -157,8 +157,8 @@ export function CallToActionSection() {
             </svg>
 
             <img
-              src="/cta-image.jpeg"
-              alt="Stock photo of two content strategists"
+              src="/images/cta-image.jpeg"
+              alt="Two content strategists at work"
               className="w-full h-[479px] object-cover lg:h-[579px] xl:h-[818px]"
             />
           </div>

@@ -9,7 +9,7 @@ export function HeroSection() {
       className="px-[6vw] pb-[6vw] xl:py-[3vw] xl:px-[4vw]"
     >
       <div className="grid gap-10 pt-4 lg:pt-36 lg:gap-20">
-        <h1 className="max-w-4xl tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-[calc(3_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
+        <h1 className="max-w-4xl tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_4)_/_25))] text-hero lg:text-[calc(2.5_*_1.2vw_+_1rem)] 2xl:text-[calc(3.5_*_1rem)]">
           I’m a digital marketing professional focused on{' '}
           <span className="relative whitespace-pre-wrap z-10">
             <span className="max-lg:bg-[var(--menuOverlayBackgroundColor)]">
@@ -38,8 +38,8 @@ export function HeroSection() {
         </h1>
         <div className="w-full h-full min-h-48 max-h-[600px] bg-slate-50 rounded-[60px] [-webkit-mask-image:-webkit-radial-gradient(white,_black)]">
           <img
-            src="/hero-image.jpg"
-            alt="Stock photo of content strategists"
+            src="/images/hero-image.jpg"
+            alt="Content strategists at work"
             className="size-full object-cover max-h-[600px]"
           />
         </div>
@@ -47,7 +47,7 @@ export function HeroSection() {
 
       <div className="grid grid-cols-1 mt-10 py-4 gap-6 md:grid-cols-[160px,_1fr] lg:mt-20 lg:gap-40 xl:gap-56">
         <img
-          src="/section-divider.png"
+          src="/images/section-divider.png"
           alt=""
           className="w-24 h-14 lg:w-40 lg:h-24 object-cover"
         />

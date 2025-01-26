@@ -7,7 +7,7 @@ export function FeaturedSection() {
         as="section"
         className="[background:--darkToLightAccentGradient] px-[6vw] pb-[6vw] xl:py-[3vw] xl:px-[4vw]"
       >
-        <h2 className="text-center whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_2.5)_/_25))] text-[calc(2.5_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(2.5_*_1.2vw_+_1rem)] xl:text-[calc(3_*_1rem)]">
+        <h2 className="text-center whitespace-pre-wrap tracking-[.01rem] leading-[calc(1.3em_*_(1_+_(1_-_2.5)_/_25))] text-hero lg:text-[calc(2.5_*_1.2vw_+_1rem)] xl:text-[calc(3_*_1rem)]">
           What I do
           <br />
           <span className="relative z-10">
@@ -56,8 +56,8 @@ export function FeaturedSection() {
                 </defs>
               </svg>
               <img
-                src="/influencer.jpeg"
-                alt="Stock photo to showcase influencer marketing"
+                src="/images/influencer.jpeg"
+                alt="Headshot of an influencer"
                 className="size-[304px] object-cover lg:size-[340px] xl:size-[482px]"
               />
             </div>
@@ -96,8 +96,8 @@ export function FeaturedSection() {
                 </defs>
               </svg>
               <img
-                src="/disruptive-tech.jpg"
-                alt="Stock photo of disruptive tech"
+                src="/images/disruptive-tech.jpg"
+                alt="People trying out VR headset"
                 className="w-full object-cover min-h-[382px] max-h-[777px] lg:min-h-[512px] xl:min-h-[735px]"
               />
             </div>
@@ -135,8 +135,8 @@ export function FeaturedSection() {
           <div className="space-y-3">
             <div className="rounded-[500px] overflow-hidden h-[200px] sm:h-[300px] lg:h-[364px] xl:h-[462px]">
               <img
-                src="/conversion.jpeg"
-                alt="Stock photo of user friendly marketing"
+                src="/images/conversion.jpeg"
+                alt="User benefiting from friendly digital marketing"
                 className="w-full object-cover h-[200px] sm:h-[300px] lg:h-[364px] xl:h-[462px]"
               />
             </div>

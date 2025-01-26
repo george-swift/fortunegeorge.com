@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Obviously-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Obviously-RegularItalic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Obviously-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'obviously';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Obviously-MediumItalic.otf') format('opentype');
+}
