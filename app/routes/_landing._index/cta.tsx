@@ -166,10 +166,7 @@ export function CallToActionSection() {
 
         <Link
           to="/contact"
-          className={cn(
-            buttonVariants(),
-            'mx-auto my-10 flex w-fit h-14 px-14 rounded-full text-white'
-          )}
+          className={cn(buttonVariants(), 'mx-auto my-10 w-fit')}
         >
           Contact Me
         </Link>
