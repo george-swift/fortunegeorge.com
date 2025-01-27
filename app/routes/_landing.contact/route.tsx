@@ -17,7 +17,7 @@ export function meta() {
   ]
 }
 
-export async function action({ request }: Route.ActionArgs) {
+export async function clientAction({ request }: Route.ClientActionArgs) {
   const formData = await request.formData()
   const errors = validatePayload(formData)
 
@@ -27,13 +27,10 @@ export async function action({ request }: Route.ActionArgs) {
 
   const response = await sendMessage(formData)
 
-  return { ok: response.ok }
-}
-
-export async function clientAction({ serverAction }: Route.ClientActionArgs) {
-  const data: unknown = await serverAction()
-
-  if (!(data as { ok?: boolean }).ok) return data
+  if (!response.ok) {
+    toast.error('Oops! There was a problem submitting your message.')
+    return
+  }
 
   toast.success('Thanks for reaching out! Expect a reply within 1-2 days.')
 
