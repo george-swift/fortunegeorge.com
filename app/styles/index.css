@@ -1,0 +1,75 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --heroTextFontSize: calc(3 * calc(0.012 * min(100vh, 900px)) + 1rem);
+  --accent-hsl: 3.87096774, 70.45454545%, 82.74509804%;
+  --darkAccent-hsl: 273.06122449, 90.18404908%, 68.03921569%;
+  --lightAccent-hsl: 42.54545455, 100%, 67.64705882%;
+  --safeLightAccent-hsl: 3.87096774, 70.45454545%, 82.74509804%;
+  --safeDarkAccent-hsl: 0, 0%, 0%;
+  --safeInverseAccent-hsl: 0, 0%, 0%;
+  --safeInverseLightAccent-hsl: 0, 0%, 0%;
+  --safeInverseDarkAccent-hsl: 0, 0%, 100%;
+  --black-hsl: 0, 0%, 0%;
+  --white-hsl: 0, 0%, 100%;
+}
+
+:root {
+  --backgroundColor: hsla(var(--darkAccent-hsl), 1);
+  --paragraphColor: hsla(var(--black-hsl), 1);
+  --titleColor: hsla(var(--black-hsl), 1);
+  --linkColor: hsla(var(--safeLightAccent-hsl), 1);
+  --menuOverlayBackgroundColor: hsla(var(--lightAccent-hsl), 1);
+
+  --darkToLightAccentGradient: linear-gradient(
+    180deg,
+    hsla(var(--darkAccent-hsl), 1) 0%,
+    hsla(var(--darkAccent-hsl), 1) 25%,
+    hsla(var(--accent-hsl), 1) 100%
+  );
+
+  --accentToLightAccentGradient: linear-gradient(
+    180deg,
+    hsla(var(--accent-hsl), 1) 0%,
+    hsla(var(--accent-hsl), 1) 25%,
+    hsla(var(--lightAccent-hsl), 1) 100%
+  );
+}
+
+[data-section-theme='light-bold'] {
+  --backgroundColor: hsla(var(--lightAccent-hsl), 1);
+  --paragraphColor: hsla(var(--black-hsl), 1);
+  --titleColor: hsla(var(--safeDarkAccent-hsl), 1);
+}
+
+[data-section-theme='bright'] {
+  --backgroundColor: hsla(var(--accent-hsl), 1);
+  --paragraphColor: hsla(var(--safeInverseAccent-hsl), 1);
+  --titleColor: hsla(var(--safeInverseAccent-hsl), 1);
+}
+
+[data-section-theme='black'] {
+  --backgroundColor: hsla(var(--black-hsl), 1);
+  --paragraphColor: hsla(var(--white-hsl), 1);
+  --titleColor: hsla(var(--white-hsl), 1);
+}
+
+html,
+body {
+  @apply bg-background text-foreground font-obviously antialiased;
+}
+
+body {
+  @apply flex flex-col min-h-screen;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply text-primary;
+}

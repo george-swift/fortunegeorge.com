@@ -1,28 +1,54 @@
+import { Toaster } from 'react-hot-toast'
 import {
   isRouteErrorResponse,
   Links,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
-} from "react-router";
+  ScrollRestoration
+} from 'react-router'
 
-import type { Route } from "./+types/root";
-import stylesheet from "./app.css?url";
+import stylesheet from '~/styles/index.css?url'
+
+import type { Route } from './+types/root'
 
 export const links: Route.LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
+    rel: 'icon',
+    href: '/favicon/favicon.ico'
   },
   {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    rel: 'icon',
+    href: '/favicon/favicon-16x16.png',
+    sizes: '16x16',
+    type: 'image/png'
   },
-  { rel: "stylesheet", href: stylesheet },
-];
+  {
+    rel: 'icon',
+    href: '/favicon/favicon-32x32.png',
+    sizes: '32x32',
+    type: 'image/png'
+  },
+  {
+    rel: 'apple-touch-icon',
+    href: '/favicon/apple-touch-icon.png',
+    type: 'image/png'
+  },
+  {
+    rel: 'android-chrome',
+    href: '/favicon/android-chrome-192x192.png',
+    sizes: '192x192',
+    type: 'image/png'
+  },
+  {
+    rel: 'android-chrome',
+    href: '/favicon/android-chrome-512x512.png',
+    sizes: '512x512',
+    type: 'image/png'
+  },
+  { rel: 'manifest', href: '/favicon/site.webmanifest' },
+  { rel: 'stylesheet', href: stylesheet }
+]
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -30,36 +56,45 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="og:title" content="Fortune George" />
+        <meta
+          name="og:description"
+          content="Fortune George is a digital marketing expert specializing in content strategy, SEO optimization, Google Ads, and social media campaigns."
+        />
+        <meta name="og:site_name" content="Fortune George" />
+        <meta name="og:locale" content="en_US" />
+        <meta name="og:type" content="website" />
         <Meta />
         <Links />
       </head>
       <body>
         {children}
+        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>
     </html>
-  );
+  )
 }
 
 export default function App() {
-  return <Outlet />;
+  return <Outlet />
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
-  let stack: string | undefined;
+  let message = 'Oops!'
+  let details = 'An unexpected error occurred.'
+  let stack: string | undefined
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? '404' : 'Error'
     details =
       error.status === 404
-        ? "The requested page could not be found."
-        : error.statusText || details;
+        ? 'The requested page could not be found.'
+        : error.statusText || details
   } else if (import.meta.env.DEV && error && error instanceof Error) {
-    details = error.message;
-    stack = error.stack;
+    details = error.message
+    stack = error.stack
   }
 
   return (
@@ -72,5 +107,5 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
         </pre>
       )}
     </main>
-  );
+  )
 }
