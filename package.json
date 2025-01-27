@@ -5,7 +5,6 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
     "prettier": "prettier --check '{,!(node_modules|build|dist)/**/}*.{ts,tsx,js,jsx}' --plugin=@ianvs/prettier-plugin-sort-imports",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "typecheck": "react-router typegen && tsc",
