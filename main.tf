@@ -53,7 +53,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
         Effect    = "Allow",
         Principal = "*",
         Action    = "s3:GetObject",
-        Resource  = "${aws_s3_bucket.react_router_site.arn}/*"
+        Resource  = "arn:aws:s3:::${var.bucket_name}/*"
       }
     ]
   })
