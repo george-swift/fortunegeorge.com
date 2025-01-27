@@ -1,4 +1,5 @@
 name: Pull Request Check
+
 on:
   pull_request:
     branches: [master, develop]
@@ -8,16 +9,21 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 20
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
           registry-url: 'https://npm.pkg.github.com'
-      - name: Install dependencies
+
+      - name: Install Dependencies
         run: npm ci --ignore-scripts
-      - name: Run Prettier check
+
+      - name: Run Prettier
         run: npm run prettier
-      - name: Run ESlint check
+
+      - name: Run ESlint
         run: npm run lint
