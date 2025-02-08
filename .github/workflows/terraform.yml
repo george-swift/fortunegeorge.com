@@ -48,7 +48,7 @@ jobs:
         run: terraform plan -out=tfplan
         env:
           TF_VAR_root_domain_bucket_name: ${{ vars.ROOT_DOMAIN_BUCKET_NAME }}
-          TF_VAR_sub_somain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
+          TF_VAR_sub_domain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
           TF_VAR_acm_certificate_arn: ${{ secrets.ACM_CERTIFICATE_ARN }}
           TF_VAR_bucket_region: ${{ vars.BUCKET_REGION }}
 
@@ -56,6 +56,6 @@ jobs:
         run: terraform apply -auto-approve tfplan
         env:
           TF_VAR_root_domain_bucket_name: ${{ vars.ROOT_DOMAIN_BUCKET_NAME }}
-          TF_VAR_sub_somain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
+          TF_VAR_sub_domain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
           TF_VAR_acm_certificate_arn: ${{ secrets.ACM_CERTIFICATE_ARN }}
           TF_VAR_bucket_region: ${{ vars.BUCKET_REGION }}
