@@ -61,6 +61,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           name="og:description"
           content="Fortune George is a digital marketing expert specializing in content strategy, SEO optimization, Google Ads, and social media campaigns."
         />
+        <meta name="og:url" content="https://www.fortunegeorge.com" />
         <meta name="og:site_name" content="Fortune George" />
         <meta name="og:locale" content="en_US" />
         <meta name="og:type" content="website" />
