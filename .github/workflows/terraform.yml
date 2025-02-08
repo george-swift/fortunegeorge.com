@@ -31,7 +31,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.BUCKET_REGION }}
+          aws-region: ${{ vars.BUCKET_REGION }}
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -47,11 +47,15 @@ jobs:
       - name: Plan Terraform
         run: terraform plan -out=tfplan
         env:
-          TF_VAR_bucket_name: ${{ secrets.BUCKET_NAME }}
-          TF_VAR_bucket_region: ${{ secrets.BUCKET_REGION }}
+          TF_VAR_root_domain_bucket_name: ${{ vars.ROOT_DOMAIN_BUCKET_NAME }}
+          TF_VAR_sub_somain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
+          TF_VAR_acm_certificate_arn: ${{ secrets.ACM_CERTIFICATE_ARN }}
+          TF_VAR_bucket_region: ${{ vars.BUCKET_REGION }}
 
       - name: Apply Terraform
         run: terraform apply -auto-approve tfplan
         env:
-          TF_VAR_bucket_name: ${{ secrets.BUCKET_NAME }}
-          TF_VAR_bucket_region: ${{ secrets.BUCKET_REGION }}
+          TF_VAR_root_domain_bucket_name: ${{ vars.ROOT_DOMAIN_BUCKET_NAME }}
+          TF_VAR_sub_somain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
+          TF_VAR_acm_certificate_arn: ${{ secrets.ACM_CERTIFICATE_ARN }}
+          TF_VAR_bucket_region: ${{ vars.BUCKET_REGION }}
