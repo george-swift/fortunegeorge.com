@@ -52,7 +52,7 @@ export function CallToActionSection() {
               </defs>
             </svg>
             <img
-              src="/images/home-office.jpg"
+              src="/images/home-office.webp"
               alt="Home office setup"
               className="w-full h-[304px] object-cover lg:h-[340px] xl:h-[482px] xl:min-w-[482px]"
             />
@@ -157,7 +157,7 @@ export function CallToActionSection() {
             </svg>
 
             <img
-              src="/images/cta-image.jpeg"
+              src="/images/cta-image.webp"
               alt="Two content strategists at work"
               className="w-full h-[479px] object-cover lg:h-[579px] xl:h-[818px]"
             />

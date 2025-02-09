@@ -38,7 +38,7 @@ export default function Services() {
 
             <div className="rounded-[60px] overflow-hidden">
               <img
-                src="/images/hero-image-services.jpg"
+                src="/images/hero-image-services.webp"
                 alt="Two digital marketers at work"
                 className="size-full min-h-[200px] max-h-[512px] object-cover sm:h-[330px] lg:h-[395px] xl:h-auto xl:min-h-[500px]"
               />

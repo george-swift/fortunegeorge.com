@@ -56,7 +56,7 @@ export function FeaturedSection() {
                 </defs>
               </svg>
               <img
-                src="/images/influencer.jpeg"
+                src="/images/influencer.webp"
                 alt="Headshot of an influencer"
                 className="size-[304px] object-cover lg:size-[340px] xl:size-[482px]"
               />
@@ -96,7 +96,7 @@ export function FeaturedSection() {
                 </defs>
               </svg>
               <img
-                src="/images/disruptive-tech.jpg"
+                src="/images/disruptive-tech.webp"
                 alt="People trying out VR headset"
                 className="w-full object-cover min-h-[382px] max-h-[777px] lg:min-h-[512px] xl:min-h-[735px]"
               />
@@ -135,7 +135,7 @@ export function FeaturedSection() {
           <div className="space-y-3">
             <div className="rounded-[500px] overflow-hidden h-[200px] sm:h-[300px] lg:h-[364px] xl:h-[462px]">
               <img
-                src="/images/conversion.jpeg"
+                src="/images/conversion.webp"
                 alt="User benefiting from friendly digital marketing"
                 className="w-full object-cover h-[200px] sm:h-[300px] lg:h-[364px] xl:h-[462px]"
               />

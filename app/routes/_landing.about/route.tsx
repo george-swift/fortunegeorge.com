@@ -40,7 +40,7 @@ export default function About() {
           </h1>
           <div className="w-full h-full min-h-48 max-h-[600px] bg-slate-50 rounded-[60px] [-webkit-mask-image:-webkit-radial-gradient(white,_black)]">
             <img
-              src="/images/hero-image.jpg"
+              src="/images/hero-image.webp"
               alt="Two content strategists at work"
               className="size-full object-cover max-h-[600px]"
             />
