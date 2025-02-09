@@ -59,3 +59,11 @@ jobs:
           TF_VAR_sub_domain_bucket_name: ${{ vars.SUB_DOMAIN_BUCKET_NAME }}
           TF_VAR_acm_certificate_arn: ${{ secrets.ACM_CERTIFICATE_ARN }}
           TF_VAR_bucket_region: ${{ vars.BUCKET_REGION }}
+
+      - name: Invalidate CloudFront Cache (Root Domain)
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_ROOT_DISTRIBUTION_ID }} --paths "/*"
+
+      - name: Invalidate CloudFront Cache (Subdomain)
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ vars.CLOUDFRONT_WWW_DISTRIBUTION_ID }} --paths "/*"
