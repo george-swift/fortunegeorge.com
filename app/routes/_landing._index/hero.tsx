@@ -38,9 +38,10 @@ export function HeroSection() {
         </h1>
         <div className="w-full h-full min-h-48 max-h-[600px] bg-slate-50 rounded-[60px] [-webkit-mask-image:-webkit-radial-gradient(white,_black)]">
           <img
-            src="/images/hero-image.jpg"
+            src="/images/hero-image.webp"
             alt="Content strategists at work"
-            className="size-full object-cover max-h-[600px]"
+            className="w-full h-[195px] object-cover max-h-[600px] sm:h-[382px] lg:h-[544px] xl:h-[600px]"
+            fetchPriority="high"
           />
         </div>
       </div>

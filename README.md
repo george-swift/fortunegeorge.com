@@ -1,37 +1,53 @@
-# Fortune George's Portfolio Website
+# **Fortune George's Portfolio Website**
 
-This project is a digital marketing professional's portfolio website, showcasing his expertise in the field. The website is hosted on [Amazon CloudFront](https://aws.amazon.com/cloudfront/) with an origin in [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) and secured via [AWS Certificate Manager (ACM)](https://docs.aws.amazon.com/acm/latest/userguide/).
+This project is a **bespoke** portfolio website designed for a digital marketing professional, showcasing expertise in brand storytelling, audience engagement, and data-driven marketing strategies.
 
-## 🌐 Live Website
+**Inspired by high-end website builders like Squarespace**, the site blends elegant design with **enterprise-grade AWS infrastructure** to ensure **speed, security, and scalability.**
+
+## 🌐 **Live Website**
 
 🔗 **[www.fortunegeorge.com](https://www.fortunegeorge.com)**
 
 ![demo](./public/images/og.png)
 
-## Features
+## **🚀 Features**
 
-- **Responsive Design**: Optimized for various screen sizes to ensure a seamless user experience.
-- **React Router 7**: Enables fast and intuitive navigation between portfolio sections.
-- **CloudFront + S3 Hosting**: High-performance static site hosting with low latency.
-- **HTTPS via ACM**: Secure SSL/TLS termination with automatic certificate renewal.
-- **CI/CD**: Automated deployments triggered on push to `master` branch, ensuring the site is always up to date.
-
-## Deployment Workflow
-
-The deployment pipeline is managed via GitHub Actions, using Terraform to define infrastructure as code (IaC). Each new build:
-
-- Syncs the latest content and updates the S3 bucket.
-- Invalidates the CloudFront cache for instant updates.
-- Ensures HTTPS enforcement via ACM.
+- **Sleek & Responsive Design** – Modern UI with seamless cross-device experience.
+- **React Router 7** – Lightning-fast navigation for a single-page app feel.
+- **CloudFront + S3 Hosting** – Low-latency global distribution via AWS CDN.
+- **Custom Domain on Route 53** – Professionally registered and managed for reliability.
+- **HTTPS via ACM** – Automatic SSL/TLS certificates for secure connections.
+- **Optimized Performance** – Images served in next-gen (WebP) format to provide better compression.
+- **CI/CD with GitHub Actions** – Push-to-deploy workflow with Terraform-managed infrastructure.
+- **Instant Updates** – CloudFront cache invalidation ensures real-time content refresh.
 
 ---
 
-## 🛠 Installation & Set Up
+## **📡 Deployment Workflow**
 
-1. Install dependencies
+The site follows **a fully automated DevOps pipeline** using **Infrastructure as Code (IaC)** for consistent deployments:
+
+1. **Terraform** provisions and maintains the AWS infrastructure (S3, CloudFront, Route 53, ACM).
+2. **GitHub Actions** automates deployments on each push to `master`.
+3. **CloudFront Cache Invalidation** ensures visitors always see the latest version.
+
+### **Tech Stack**
+
+- **Frontend:** React + React Router 7 + TypeScript + Tailwind
+- **Hosting:** AWS S3 + CloudFront
+- **Infrastructure:** Terraform (IaC)
+- **CI/CD:** GitHub Actions
+- **Domain Management:** AWS Route 53
+- **Security:** AWS ACM for SSL/TLS
+
+---
+
+## **🛠 Installation & Local Development**
+
+1. Install dependencies:
 
    ```sh
-   npm i
+   npm install
 
    ```
 
