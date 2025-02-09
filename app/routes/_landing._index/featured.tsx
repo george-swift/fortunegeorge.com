@@ -98,7 +98,7 @@ export function FeaturedSection() {
               <img
                 src="/images/disruptive-tech.webp"
                 alt="People trying out VR headset"
-                className="w-full object-cover min-h-[382px] max-h-[777px] lg:min-h-[512px] xl:min-h-[735px]"
+                className="w-[256px] h-[382px] object-cover min-h-[382px] max-h-[777px] sm:w-full lg:min-h-[512px] xl:min-h-[735px]"
               />
             </div>
             <h3 className="text-[calc(0.6_*_calc(.012_*_min(100vh,_900px))_+_1rem)] lg:text-[calc(0.6_*_1.2vw_+_1rem)] 2xl:text-[calc(1.6_*_1rem)]">

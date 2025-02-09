@@ -40,7 +40,7 @@ export function HeroSection() {
           <img
             src="/images/hero-image.webp"
             alt="Content strategists at work"
-            className="size-full object-cover max-h-[600px]"
+            className="w-full h-[195px] object-cover max-h-[600px] sm:h-[382px] lg:h-[544px] xl:h-[600px]"
             fetchPriority="high"
           />
         </div>
