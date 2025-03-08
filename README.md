@@ -1,8 +1,6 @@
 # **Fortune George's Portfolio Website**
 
-This project is a **bespoke** portfolio website designed for a digital marketing professional, showcasing expertise in brand storytelling, audience engagement, and data-driven marketing strategies.
-
-**Inspired by high-end website builders like Squarespace**, the site blends elegant design with **enterprise-grade AWS infrastructure** to ensure **speed, security, and scalability.**
+This project is a **bespoke** portfolio website designed for a digital marketing professional, showcasing expertise in brand storytelling, audience engagement, and data-driven marketing strategies. The site blends elegant design with enterprise-grade AWS infrastructure to ensure speed, security, and scalability.
 
 ## 🌐 **Live Website**
 
