@@ -11,6 +11,7 @@ import {
 import stylesheet from '~/styles/index.css?url'
 
 import type { Route } from './+types/root'
+import { GoogleAnalyticsScript } from './lib/google-analytics'
 
 export const links: Route.LinksFunction = () => [
   {
@@ -54,6 +55,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6G1TYS0F5F"
+        ></script>
+        <script dangerouslySetInnerHTML={{ __html: GoogleAnalyticsScript() }} />
+
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="og:title" content="Fortune George" />
