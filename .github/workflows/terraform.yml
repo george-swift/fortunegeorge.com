@@ -41,6 +41,24 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
+      - name: Check Terraform State Lock
+        run: |
+          set -e
+          if terraform state pull >/dev/null 2>&1; then
+            echo "Terraform state accessible."
+          else
+            echo "Terraform state is locked or unavailable."
+            exit 1
+          fi
+
+      - name: Unlock Terraform State (If Necessary)
+        run: |
+          LOCK_ID=$(terraform force-unlock -force 2>&1 | grep -oP '(?<=Lock info: ).*' || true)
+          if [ -n "$LOCK_ID" ]; then
+            echo "Force unlocking Terraform state with ID: $LOCK_ID"
+            terraform force-unlock $LOCK_ID
+          fi
+
       - name: Validate Terraform
         run: terraform validate
 
