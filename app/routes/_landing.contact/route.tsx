@@ -1,12 +1,14 @@
 import toast from 'react-hot-toast'
-import { data, useFetcher } from 'react-router'
+import { useFetcher } from 'react-router'
+import { z } from 'zod'
 
 import { Button } from '~/components/button'
 import { Container } from '~/components/container'
 import { Input } from '~/components/input'
 import { Textarea } from '~/components/textarea'
-import { sendMessage, validatePayload } from '~/lib/formspree'
+import { sendMessage } from '~/lib/formspree'
 import { socials } from '~/lib/utils'
+import { schema } from '~/lib/validation'
 
 import type { Route } from '../../+types/root'
 
@@ -19,10 +21,23 @@ export function meta() {
 
 export async function clientAction({ request }: Route.ClientActionArgs) {
   const formData = await request.formData()
-  const errors = validatePayload(formData)
 
-  if (Object.keys(errors).length > 0) {
-    return data({ errors }, { status: 400 })
+  const validatedFields = schema.safeParse({
+    firstName: formData.get('firstName'),
+    lastName: formData.get('lastName'),
+    email: formData.get('email'),
+    message: formData.get('message')
+  })
+
+  if (!validatedFields.success) {
+    const error = validatedFields.error.errors.reduce(
+      (acc: Record<string, string>, { path, message }: z.ZodIssue) => (
+        (acc[path.join('.')] = message), acc
+      ),
+      {}
+    )
+
+    return { ok: false, error }
   }
 
   const response = await sendMessage(formData)
@@ -42,13 +57,13 @@ export async function clientAction({ request }: Route.ClientActionArgs) {
 export default function Contact() {
   const fetcher = useFetcher()
   const pending = fetcher.state !== 'idle'
-  const errors = fetcher.data?.errors
+  const error = fetcher.data?.error
 
   return (
     <main className="grow w-full -mt-px [background:--accentToLightAccentGradient]">
       <Container
         as="section"
-        className="px-[6vw] py-[6vw] -mt-px xl:py-[3vw] xl:px-[4vw]"
+        className="p-[6vw] -mt-px xl:py-[3vw] xl:px-[4vw]"
       >
         <div className="grid grid-cols-1  gap-6 md:grid-cols-2">
           <div>
@@ -124,15 +139,15 @@ export default function Contact() {
           >
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <Input
-                id="first-name"
-                name="first-name"
+                id="firstName"
+                name="firstName"
                 label="First name"
-                helperText={errors?.firstName}
+                helperText={error?.firstName}
                 required
               />
               <Input
-                id="last-name"
-                name="last-name"
+                id="lastName"
+                name="lastName"
                 label="Last name"
                 wrapperClasses="mt-auto"
               />
@@ -142,7 +157,7 @@ export default function Contact() {
                 name="email"
                 label="Email"
                 wrapperClasses="sm:col-span-2"
-                helperText={errors?.email}
+                helperText={error?.email}
                 required
               />
               <Textarea
@@ -150,7 +165,7 @@ export default function Contact() {
                 name="message"
                 label="Message"
                 wrapperClasses="sm:col-span-2"
-                helperText={errors?.message}
+                helperText={error?.message}
                 required
               />
             </div>

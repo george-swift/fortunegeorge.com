@@ -4,3 +4,8 @@
 # React Router
 /.react-router/
 /build/
+
+# Terraform
+.terraform.lock.hcl
+tfplan
+.terraform/

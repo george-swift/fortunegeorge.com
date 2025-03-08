@@ -65,6 +65,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="og:site_name" content="Fortune George" />
         <meta name="og:locale" content="en_US" />
         <meta name="og:type" content="website" />
+        <meta
+          name="og:image"
+          content="https://www.fortunegeorge.com/images/og.png"
+        />
         <Meta />
         <Links />
       </head>
